@@ -4,6 +4,7 @@
 (function () {
     const vscode = acquireVsCodeApi();
     let todos = [];
+
    
 
     const todoForm = document.getElementById('todo-form');
@@ -33,7 +34,12 @@
         todoInput.value = '';
         
         renderTodos();
+        saveTodos();
 
+    }
+
+    function saveTodos(){
+        window.localStorage.setItem('todos', JSON.stringify(todos));
     }
 
     function renderTodos(){
@@ -74,6 +80,14 @@
                 renderTodos();
                 break;
 
+        }
+    });
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const savedTodos = window.localStorage.getItem('todos');
+        if(savedTodos){
+            todos = JSON.parse(savedTodos);
+            renderTodos();
         }
     });
 
