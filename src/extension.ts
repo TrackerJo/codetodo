@@ -25,28 +25,6 @@ export function activate(context: vscode.ExtensionContext) {
 	);
   
 
-	context.subscriptions.push( vscode.commands.registerCommand('codetodo.helloWorld', () => {
-		
-		HelloWorldPanel.createOrShow(context.extensionUri);
-	}));
-
-	context.subscriptions.push( vscode.commands.registerCommand('codetodo.refresh', () => {
-		
-		HelloWorldPanel.kill();
-		HelloWorldPanel.createOrShow(context.extensionUri);
-		setTimeout(() => {
-			vscode.commands.executeCommand('workbench.action.webview.openDeveloperTools');
-		}, 500);
-	}));
-
-	context.subscriptions.push(vscode.commands.registerCommand('codetodo.askQuestion', async () => {
-		const answer = await vscode.window.showInformationMessage('How was your day?', "Good", "Bad");
-		if (answer === "Good") {
-			vscode.window.showInformationMessage('Great to hear that!');
-		} else if (answer === "Bad") {
-			vscode.window.showInformationMessage('That is sad to hear!');
-		}
-	}));
 
 	context.subscriptions.push(vscode.commands.registerCommand('codetodo.addTodo', async () => {
 		const userResponse = await vscode.window.showInputBox({
@@ -133,11 +111,13 @@ async function checkGlobalTodos(storageManager: GlobalStorageService, sidebarPro
 	const response = await vscode.window.showInformationMessage('You have ' + incompleteTodos.length + taskWord + ' to complete!', 'View');
 	if(response === 'View'){
 		vscode.commands.executeCommand('workbench.view.extension.codetodo-sidebar-view');
-
-		sidebarProvider._view?.webview.postMessage({
-			type: 'view-global-todos'
-
-		});
+		setTimeout(() => {
+			sidebarProvider._view?.webview.postMessage({
+				type: 'view-global-todos'
+	
+			});
+		}, 500);
+		
 
 	}
 }

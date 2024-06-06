@@ -2,7 +2,7 @@
   "name": "codetodo",
   "displayName": "CodeToDo",
   "description": "Creates Todo list natively in VS Code",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "icon": "media/extension_icon.png",
   "publisher": "trackerjo",
   "repository": {
@@ -16,9 +16,9 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:codetodo.helloWorld",
-    "onCommand:codetodo.askQuestion",
-    "onCommand:codetodo.refresh",
+
+
+
     "onCommand:codetodo.addTodo",
     "onCommand:codetodo.addGlobalTodo",
     "onView:codetodo-sidebar"
@@ -46,21 +46,7 @@
       ]
     },
     "commands": [
-      {
-        "command": "codetodo.helloWorld",
-        "title": "Hello World",
-        "category": "CodeToDo"
-      },
-      {
-        "command": "codetodo.askQuestion",
-        "title": "Ask Question",
-        "category": "CodeToDo"
-      },
-      {
-        "command": "codetodo.refresh",
-        "title": "Refresh",
-        "category": "CodeToDo"
-      },
+      
       {
         "command": "codetodo.addTodo",
         "title": "Add Todo",
