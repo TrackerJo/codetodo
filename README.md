@@ -16,6 +16,10 @@ CodeToDo adds a todo list natively into VSCode that has a list specific to the p
 
 ## Release Notes
 
-### 1.0.0
+### 0.1.0
 
 Initial release of CodeToDo
+
+### 0.1.1
+
+Updated Extension Icon
