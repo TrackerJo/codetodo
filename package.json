@@ -2,7 +2,7 @@
   "name": "codetodo",
   "displayName": "CodeToDo",
   "description": "Creates Todo list natively in VS Code",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "icon": "media/extension_icon.png",
   "publisher": "trackerjo",
   "repository": {
@@ -21,7 +21,8 @@
 
     "onCommand:codetodo.addTodo",
     "onCommand:codetodo.addGlobalTodo",
-    "onView:codetodo-sidebar"
+    "onView:codetodo-sidebar",
+    "onStartupFinished"
   ],
   "main": "./out/extension.js",
   "contributes": {

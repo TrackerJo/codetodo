@@ -27,3 +27,7 @@ Updated Extension Icon
 ### 0.1.2
 
 Removed test commands and fixed viewing global tasks bug
+
+### 0.1.3
+
+Fixed activation event so extension is activated on launch
