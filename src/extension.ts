@@ -94,11 +94,16 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 async function checkToDos(storageManager: GlobalStorageService){
+	interface Todo {
+		text: string;
+		completed: boolean;
+		id: number;
+	}
 	const projectName = vscode.workspace.name;
 	if (!projectName) {
 		return;
 	}
-	const currentTodos = storageManager.getValue<Object[]>(projectName + '-todos') || [];
+	const currentTodos = storageManager.getValue<Todo[]>(projectName + '-todos') || [];
 	if (currentTodos.length === 0) {
 		return;
 	}
@@ -112,11 +117,17 @@ async function checkToDos(storageManager: GlobalStorageService){
 }
 
 async function checkGlobalTodos(storageManager: GlobalStorageService, sidebarProvider: SidebarProvider){
-	const currentTodos = storageManager.getValue<Object[]>('global-todos') || [];
+	interface Todo {
+		text: string;
+		completed: boolean;
+		id: number;
+	}
+
+	const currentTodos = storageManager.getValue<Todo[]>('global-todos') || [];
 	if (currentTodos.length === 0) {
 		return;
 	}
-	
+
 	const incompleteTodos = currentTodos.filter((todo) => !todo.completed);
 	const taskWord = incompleteTodos.length === 1 ? ' global task' : ' global tasks';
 	const response = await vscode.window.showInformationMessage('You have ' + incompleteTodos.length + taskWord + ' to complete!', 'View');
