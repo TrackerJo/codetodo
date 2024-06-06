@@ -23,3 +23,7 @@ Initial release of CodeToDo
 ### 0.1.1
 
 Updated Extension Icon
+
+### 0.1.2
+
+Removed test commands and fixed viewing global tasks bug
