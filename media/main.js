@@ -457,6 +457,29 @@
                 renderCompletedTodos();
                 break;
             case 'view-global-todos':
+                //Remove the active class from all panes
+                const activePane = document.querySelector('.pane.active');
+                if(activePane){
+                    activePane.classList.remove('active');
+                    const indicator = activePane.querySelector('.indicator');
+                    if(indicator.classList.contains('codicon-chevron-down')){
+                        indicator.classList.remove('codicon-chevron-down');
+                        indicator.classList.add('codicon-chevron-right');
+                        
+                    } else {
+                        indicator.classList.remove('codicon-chevron-right');
+                        indicator.classList.add('codicon-chevron-down');
+
+                    }
+                    const content = activePane.nextElementSibling;
+                    if (content.style.height){
+                        content.style.height = null;
+                    } else {
+                        content.style.height = "100vh";
+                        todoDiv.style.display = 'none';
+
+                    }
+                }
                 globalTasksPane.classList.toggle("active");
                 const indicator = globalTasksPane.querySelector('.indicator');
 

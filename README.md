@@ -40,3 +40,7 @@ Fixed deleting completed todos bug
 
 Fixed tasks notification showing with 0 tasks to complete
 Updated looks of sideview
+
+### 0.1.6
+
+Fixed viewing global todos not closing open tab
