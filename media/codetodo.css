@@ -23,14 +23,22 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: 100vh;
 }
+
+/* .todo-window{
+    max-height: 50vh;
+}
+
+.more-options {
+    max-height: 50vh;
+} */
 
 .content {
     padding: 0 18px;
-    max-height: 0;
+    height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: height 0.2s ease-out;
     background-color: rgb(33, 37, 43);
     width: 100vw;
     position: relative;
@@ -90,4 +98,19 @@ body {
     outline-offset: -1px;
     outline-style: solid;
     outline-width: 1px;
+}
+
+#completed-global-tasks-list, #completed-todo-list{
+    overflow: scroll;
+    max-height: 90%;
+}
+
+#todo-list{
+    overflow: scroll;
+    max-height: 90%;
+}
+
+#global-tasks-list {
+    overflow: scroll;
+    max-height: 90%;
 }

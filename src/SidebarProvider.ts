@@ -119,58 +119,64 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 			</head>
       <body>
       <div class="main-window">
-      <div class="todo-window">
-          <form id="todo-form">
-              <input type="text" id="todo-input"> 
-          </form>
-  
-          <div id="todo-list">
-  
-          </div>
-      </div>
-      <div class="more-options">
-      <div class="pane vertical completed-tasks-pane">
-      <div class="pane-header">
-          <div class="codicon codicon-chevron-right indicator"></div>
-          <h3 class="title">Completed Tasks</h3>
-      </div>
-  </div>
-  
-  <div class="content completed-todo-list-content">
-      <div id="completed-todo-list">
+           <div class="pane vertical todo-list-pane active">
+                <div class="pane-header">
+                    <div class="codicon codicon-chevron-down indicator"></div>
+                    <h3 class="title">Todo List</h3>
+                </div>
+            </div>
+            <div class="content todo-list-content" style="height: 100vh;">
+                <form id="todo-form">
+                    <input type="text" id="todo-input"> 
+                </form>
+        
+                <div id="todo-list">
+        
+                </div>
+            </div>
+            
+            <div class="pane vertical completed-tasks-pane">
+                <div class="pane-header">
+                    <div class="codicon codicon-chevron-right indicator"></div>
+                    <h3 class="title">Completed Tasks</h3>
+                </div>
+            </div>
+            
+            <div class="content completed-todo-list-content">
+                <div id="completed-todo-list">
+    
+                </div>
+            </div>
 
-      </div>
-  </div>
-  <div class="pane vertical global-tasks-pane">
-  <div class="pane-header">
-      <div class="codicon codicon-chevron-right indicator"></div>
-      <h3 class="title">Global Tasks</h3>
-  </div>
-</div>
-
-<div class="content global-tasks-content">
-<form id="global-todo-form">
-<input type="text" id="global-todo-input"> 
-</form>
-  <div id="global-tasks-list">
-     
-  </div>
-</div>
-<div class="pane vertical completed-global-tasks-pane">
-<div class="pane-header">
-    <div class="codicon codicon-chevron-right indicator"></div>
-    <h3 class="title">Completed Global Tasks</h3>
-</div>
-</div>
-
-<div class="content completed-global-tasks-content">
-
-<div id="completed-global-tasks-list">
-   
-</div>
-</div>
-      </div>
-  </div>
+            <div class="pane vertical global-tasks-pane">
+                <div class="pane-header">
+                    <div class="codicon codicon-chevron-right indicator"></div>
+                    <h3 class="title">Global Tasks</h3>
+                </div>
+            </div>
+            
+            <div class="content global-tasks-content">
+                <form id="global-todo-form">
+                    <input type="text" id="global-todo-input"> 
+                </form>
+                <div id="global-tasks-list">
+                    
+                </div>
+            </div>
+            <div class="pane vertical completed-global-tasks-pane">
+                <div class="pane-header">
+                    <div class="codicon codicon-chevron-right indicator"></div>
+                    <h3 class="title">Completed Global Tasks</h3>
+                </div>
+            </div>
+            
+            <div class="content completed-global-tasks-content">
+                
+                <div id="completed-global-tasks-list">
+                    
+                </div>
+            </div>
+        </div>
 
         <script src="${scriptUri}" nonce="${nonce}"></script>
 			

@@ -39,3 +39,4 @@ Fixed deleting completed todos bug
 ### 0.1.5
 
 Fixed tasks notification showing with 0 tasks to complete
+Updated looks of sideview
