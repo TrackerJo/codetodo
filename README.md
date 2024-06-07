@@ -35,3 +35,7 @@ Fixed activation event so extension is activated on launch
 #### 0.1.4
 
 Fixed deleting completed todos bug
+
+### 0.1.5
+
+Fixed tasks notification showing with 0 tasks to complete

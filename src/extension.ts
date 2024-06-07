@@ -87,6 +87,9 @@ async function checkToDos(storageManager: GlobalStorageService){
 	}
 	
 	const incompleteTodos = currentTodos.filter((todo) => !todo.completed);
+	if (incompleteTodos.length === 0) {
+		return;
+	}
 	const taskWord = incompleteTodos.length === 1 ? ' task' : ' tasks';
 	const response = await vscode.window.showInformationMessage('You have ' + incompleteTodos.length + taskWord + ' to complete!', 'View');
 	if(response === 'View'){
@@ -107,6 +110,9 @@ async function checkGlobalTodos(storageManager: GlobalStorageService, sidebarPro
 	}
 
 	const incompleteTodos = currentTodos.filter((todo) => !todo.completed);
+	if (incompleteTodos.length === 0) {
+		return;
+	}
 	const taskWord = incompleteTodos.length === 1 ? ' global task' : ' global tasks';
 	const response = await vscode.window.showInformationMessage('You have ' + incompleteTodos.length + taskWord + ' to complete!', 'View');
 	if(response === 'View'){
