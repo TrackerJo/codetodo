@@ -307,7 +307,10 @@
             deleteButton.style.cursor = 'pointer';
             deleteButton.style.margin = '5px';
             deleteButton.addEventListener('click', function(){
-                todos = completedTodos.filter(function(item){
+                todos = todos.filter(function(item){
+                    if(item.completed){
+                        return item.id !== todo.id;
+                    }
                     return item.id !== todo.id;
                 });
                 renderCompletedTodos();
@@ -384,7 +387,10 @@
             deleteButton.style.cursor = 'pointer';
             deleteButton.style.margin = '5px';
             deleteButton.addEventListener('click', function(){
-                globalTodos = completedTodos.filter(function(item){
+                globalTodos = globalTodos.filter(function(item){
+                    if(item.completed){
+                        return item.id !== todo.id;
+                    }
                     return item.id !== todo.id;
                 });
                 renderGlobalCompletedTodos();
