@@ -2,7 +2,7 @@
   "name": "codetodo",
   "displayName": "CodeToDo",
   "description": "Creates Todo list natively in VS Code",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "icon": "media/extension_icon.png",
   "publisher": "trackerjo",
   "repository": {

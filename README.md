@@ -16,31 +16,35 @@ CodeToDo adds a todo list natively into VSCode that has a list specific to the p
 
 ## Release Notes
 
-### 0.1.0
+### 0.1.7
 
-Initial release of CodeToDo
+Fixed the sizes of panel headers
 
-### 0.1.1
+### 0.1.6
 
-Updated Extension Icon
-
-### 0.1.2
-
-Removed test commands and fixed viewing global tasks bug
-
-### 0.1.3
-
-Fixed activation event so extension is activated on launch
-
-#### 0.1.4
-
-Fixed deleting completed todos bug
+Fixed viewing global todos not closing open tab
 
 ### 0.1.5
 
 Fixed tasks notification showing with 0 tasks to complete
 Updated looks of sideview
 
-### 0.1.6
+#### 0.1.4
 
-Fixed viewing global todos not closing open tab
+Fixed deleting completed todos bug
+
+### 0.1.3
+
+Fixed activation event so extension is activated on launch
+
+### 0.1.2
+
+Removed test commands and fixed viewing global tasks bug
+
+### 0.1.1
+
+Updated Extension Icon
+
+### 0.1.0
+
+Initial release of CodeToDo
